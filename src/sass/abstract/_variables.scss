@@ -1,0 +1,26 @@
+:root {
+  --gap: 16px;
+  --gap-md: 24px;
+  --gap-lg: 32px;
+  --gap-xl: 40px;
+  --gap-xlg: 48px;
+
+
+  --color-primary: #0a192f;
+  --color-primary-light: #152640;
+  --color-secondary: #E684AF;
+  --color: #fff;
+
+
+  &.theme--night {
+    --color-primary: #0a192f;
+    --color-primary-light: #152640;
+    --color-secondary: #E684AF;
+
+    --color-action: #1a73e8;
+    --color-link: hsla(0, 0%, 100%, .5);
+
+    --bg-toolitip: #555;
+    --bg-clipboard: #666;
+  }
+}

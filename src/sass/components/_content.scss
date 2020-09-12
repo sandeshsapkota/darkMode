@@ -1,0 +1,154 @@
+
+p {
+  margin-bottom: 16px;
+}
+
+h1 {
+  font-size: 40px;
+}
+
+h2, b {
+  margin: 0 0 24px;
+  font-size: 24px;
+
+  &:hover svg {
+    visibility: visible;
+    opacity: 1;
+  }
+
+
+  svg {
+    visibility: hidden;
+    opacity: 0;
+    cursor: pointer;
+    fill: currentColor;
+    margin-left: 24px;
+    transform: rotate(45deg) translateY(25%);
+    transition: .3s;
+
+
+  }
+
+  span {
+    position: relative;
+  }
+
+  span:hover {
+    .tooltip {
+      visibility: visible;
+      opacity: 1;
+    }
+
+    svg {
+      fill: var(--color-action);
+    }
+  }
+
+  .tooltip {
+    background: var(--bg-toolitip);
+    padding: 4px 8px;
+    position: absolute;
+    top: 120%;
+    right: 0;
+    white-space: nowrap;
+    font-size: 11px;
+    visibility: hidden;
+    opacity: 0;
+    z-index: 8;
+    border-radius: 3px;
+  }
+
+}
+
+
+body {
+  background: var(--color-primary);
+  color: var(--color);
+  transition: color, background;
+}
+
+header {
+  padding: 16px 0;
+  color: var(--color-white);
+  background: var(--color-primary);
+}
+
+.content {
+  display: flex;
+  position: relative;
+
+  .site-content {
+    width: 50%;
+    margin: 0 auto 0 5%;
+  }
+
+  .section {
+    padding: 24px 0 24px;
+  }
+
+  .section section {
+    padding: 16px 0;
+  }
+
+  .section section b {
+    display: block;
+    margin-bottom: 12px;
+    font-size: 21px;
+  }
+
+
+  .sidebar {
+    width: 20%;
+    min-width: 260px;
+    padding: 32px;
+    background: var(--color-primary);
+    position: relative;
+
+    > ul {
+      position: fixed;
+      width: inherit;
+    }
+
+    &__link, &__link-nested {
+      display: block;
+      color: var(--color-link);
+      font-size: 16px;
+      transition: .3s;
+    }
+
+    &__link.is--active {
+      color: var(--color-white);
+    }
+
+    li {
+      margin-bottom: 8px;
+    }
+
+    &__link-nested {
+      font-size: 14px;
+      padding-left: 16px;
+      margin-top: 8px;
+    }
+  }
+
+}
+
+
+.clipboard-message {
+  width: 280px;
+  background: var(--bg-clipboard);
+  padding: 12px 16px;
+  position: fixed;
+  visibility: hidden;
+  opacity: 0;
+  bottom: 0;
+  right: 40px;
+  transition: .2s;
+  border-radius: 4px;
+
+  &--show {
+    bottom: 40px;
+    visibility: visible;
+    opacity: 1;
+  }
+}
