@@ -1,8 +1,3 @@
-// document.onselectstart = function (e) {
-//     e.preventDefault();
-//     return false;
-// };
-
 
 const doc = document.documentElement;
 const body = document.body;
