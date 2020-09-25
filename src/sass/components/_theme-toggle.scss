@@ -2,13 +2,13 @@
 .theme-toggle {
   margin-left: auto;
   position: fixed;
-  top: 40px;
-  right: 48px;
+  top: 50%;
+  right: 50%;
   cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
-
+  transform:  translate(50%, -50%);
   .sun {
     background: var(--color-secondary);
     width: 37px;
@@ -67,12 +67,12 @@
 
   .theme-toggle:hover{
     .moon {
-      transform:  scale(1) translate(-3px, -6px)  ;
+      transform:  scale(1) translate(-3%, -18%)  ;
     }
   }
 
   .moon {
-    transform:  scale(1) translate(0, -6px);
+    transform:  scale(1) translate(11%, -11%);
   }
 
   .theme-toggle .sun__ray {
@@ -87,4 +87,25 @@
     }
   }
 
+}
+
+.box{
+  height: 30px;
+  width: 30px;
+  animation-name: blink;
+  animation-duration:4s;
+  animation-iteration-count: 6;
+  animation-fill-mode: backwards;
+}
+
+@keyframes blink {
+  0% {
+    background-color: red;
+  }
+  50%{
+    background-color: yellow;
+  }
+  100%{
+    background-color: blue;
+  }
 }
